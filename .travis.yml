@@ -23,11 +23,11 @@ install:
   - pip install codecov
 
 script:
-  - coverage run manage.py test
+  - py.test --cov=luzfcb_todo --cov-report=term-missing -vv
   - coverage combine
   - coverage report
   - coverage xml --ignore-errors
-  - codecov []
+  - codecov
 
 before_cache:
   - rm -rf $HOME/.cache/pip/log

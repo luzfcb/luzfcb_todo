@@ -60,10 +60,8 @@ Development
 
 To run the all tests run::
 
-    export DJANGO_SETTINGS_MODULE=config.settings
-
     pip install -r requirements.txt
 
-    coverage run manage.py test
+    py.test --cov=luzfcb_todo --cov-report=term-missing -vv
     coverage report -m
 
