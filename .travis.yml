@@ -25,7 +25,6 @@ install:
 script:
   - py.test --cov=luzfcb_todo --cov-report=term-missing -vv
   - coverage combine
-  - coverage report
   - coverage xml --ignore-errors
   - codecov
 
